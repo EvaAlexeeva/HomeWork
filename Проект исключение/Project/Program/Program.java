@@ -65,7 +65,7 @@ public class Program< C extends ConsOn> {
     
     private void writePersonData(DataEx data) throws IOException {
         File filepath = new File(data.getLastName());
-        try (FileWriter fw = new FileWriter(filepath, true)) {
+        try (FileWriter fw = new FileWriter(filepath, StandardCharsets.UTF_8)) {
             fw.append(data.toString() + "\n");
         } catch (IOException e) {
             throw e;
